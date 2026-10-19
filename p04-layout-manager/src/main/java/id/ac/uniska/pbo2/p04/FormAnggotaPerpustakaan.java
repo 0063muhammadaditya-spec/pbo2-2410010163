@@ -36,7 +36,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         );
         alamatArea.setLineWrap(true);
         alamatArea.setWrapStyleWord(true);
-        persetujuanCheckBox.putClientProperty(
+        sayaSetyjuCheck.putClientProperty(
             "JComponent.focusWidth", 1
         );
         getRootPane().setDefaultButton(daftarButton);
@@ -80,7 +80,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         alamatArea = new javax.swing.JTextArea();
         persetujuanPanel = new javax.swing.JPanel();
         persetujuanLabel = new javax.swing.JLabel();
-        persetujuanCheckBox = new javax.swing.JCheckBox();
+        sayaSetyjuCheck = new javax.swing.JCheckBox();
         tombolPanel = new javax.swing.JPanel();
         batalButton = new javax.swing.JButton();
         daftarButton = new javax.swing.JButton();
@@ -153,7 +153,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.weightx = 1.0;
         dataPanel.add(namaField, gridBagConstraints);
 
-        programStudiCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Teknik Informatika", "Sistem Informasi", "Hukum", "Kimia" }));
+        programStudiCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Teknik Informatika", "Sistem Informasi", " " }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -223,17 +223,21 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
         kontakPanel.add(alamatLabel, gridBagConstraints);
+
+        emailField.setMargin(new java.awt.Insets(4, 6, 4, 6));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(4, 6, 4, 6);
         kontakPanel.add(emailField, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(4, 6, 4, 6);
         kontakPanel.add(hpField, gridBagConstraints);
 
         alamatArea.setColumns(20);
@@ -243,6 +247,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(4, 6, 4, 6);
         kontakPanel.add(alamatArea, gridBagConstraints);
 
         isiPanel.add(kontakPanel, java.awt.BorderLayout.CENTER);
@@ -254,8 +259,8 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         persetujuanLabel.setText("Persetujuan");
         persetujuanPanel.add(persetujuanLabel, java.awt.BorderLayout.PAGE_START);
 
-        persetujuanCheckBox.setText("Saya setuju dengan Tata tertib Perpustakaan");
-        persetujuanPanel.add(persetujuanCheckBox, java.awt.BorderLayout.CENTER);
+        sayaSetyjuCheck.setText("Saya setuju dengan Tata tertib Perpustakaan");
+        persetujuanPanel.add(sayaSetyjuCheck, java.awt.BorderLayout.CENTER);
 
         isiPanel.add(persetujuanPanel, java.awt.BorderLayout.PAGE_END);
 
@@ -331,11 +336,11 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
     private javax.swing.JLabel namaLabel;
     private javax.swing.JTextField npmField;
     private javax.swing.JLabel npmLabel;
-    private javax.swing.JCheckBox persetujuanCheckBox;
     private javax.swing.JLabel persetujuanLabel;
     private javax.swing.JPanel persetujuanPanel;
     private javax.swing.JLabel programLabel;
     private javax.swing.JComboBox<String> programStudiCombo;
+    private javax.swing.JCheckBox sayaSetyjuCheck;
     private javax.swing.JPanel tombolPanel;
     private javax.swing.JRadioButton umuumRb;
     // End of variables declaration//GEN-END:variables

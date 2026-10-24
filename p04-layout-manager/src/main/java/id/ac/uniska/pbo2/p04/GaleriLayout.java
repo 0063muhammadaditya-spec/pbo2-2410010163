@@ -8,7 +8,7 @@ import com.formdev.flatlaf.FlatLightLaf;
 
 /**
  *
- * @author Della
+ * @author Adit
  */
 public class GaleriLayout extends javax.swing.JFrame {
     

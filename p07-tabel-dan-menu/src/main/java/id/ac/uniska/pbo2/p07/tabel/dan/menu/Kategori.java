@@ -1,13 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package id.ac.uniska.pbo2.p07.tabel.dan.menu;
 
-
-public class Kategori {
-
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+/**
+* Kategori kontak. Nilai dari toString() dipakai sebagai teks di JComboBox dan tabel.
+*/
+public enum Kategori {
+ KELUARGA("Keluarga"),
+ TEMAN("Teman"),
+ KAMPUS("Kampus"),
+ KERJA("Kerja");
+ private final String label;
+ Kategori(String label) {
+ this.label = label;
+ }
+ @Override
+ public String toString() {
+ return label;
+ }
 }
